@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', domReady);
                 let image = sections[i].getElementsByClassName('b-dics__image-container')[0].getElementsByClassName('b-dics__image')[0]
                 switch (idx) {
                     case 0:
-                        image.src = 'resource_new/depth/gundam';
+                        image.src = 'resource_new/scan_bim/scene1';
                         break;
                     case 1:
                         image.src = 'resource_new/depth/venue';
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', domReady);
                         image.src = image.src + '.jpg';
                         break;
                     case 1:
-                        image.src = image.src + '_ours.jpg';
+                        image.src = image.src + '_bim.jpg';
                         break;
                     // case 2:
                     //     image.src = image.src + '_zoe.jpg';
