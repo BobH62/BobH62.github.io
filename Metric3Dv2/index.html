@@ -138,12 +138,15 @@
           <p>
             We introduce SLABIM, an open-sourced SLAM dataset that couples with BIM (Building Information Modeling). This dataset provides BIM
             and SLAM-oriented sensor data, both modeling a university building at HKUST. 
-            (1) Transforming all images and depth labels into a canonical camera space, to avoid confusing networks by the ambiguity from varying camera focal lengths. (2) A joint depth-normal optimization module to distill knowledge from abundant and diverse depth labels to normal learning.
-           
+            <br>
+            (1).  Large-scale Building Information Modeling: The BIM model of this dataset is a part of the digital twin project in HKUST, featuring various types of offices, classrooms, lounges, and corridors.           
+            <br>
+            (2). Multi-session & Multi-sensor Data: We collect 12 sessions across different floors and regions. These sessions encompass various indoor scenarios.
+            <br>
+            (3). Dataset Validation: To demonstrate the practicality of SLABIM, we test three different tasks: (1) LiDAR-to-BIM registration, and (2) Robot pose tracking on BIM and (3) Semantic mapping.
             <br>
             <br>
-
-            The sliders below compare on in-the-wild images of Metric3Dv2 with the previous state-of-the-art methods ZoeDepth and Omnidata(v2).
+            The sliders below compare on 
           </p>
         </div>
       </div>
@@ -158,7 +161,7 @@
     <!-- Results. -->
     <div class="columns is-centered ">
       <div class="column is-full-width">
-        <h2 class="title is-3 has-text-centered" style="margin-top: -30px">Results</h2>        
+        <h2 class="title is-3 has-text-centered" style="margin-top: -30px">Visualization</h2>        
 
         <h3 class="title is-4">Zero-shot monocular metric depth estimation</h3>
         <div class="container">
@@ -344,7 +347,7 @@
         <h2 class="title is-3" style="margin-top: -30px">Video Demo</h2>
         <div class="content has-text-justified">
           <p>
-            We present our depth and normal prediction as well as their applications on 3D reconstruction and SLAM here.
+            We present the SLABIM dataset as well as the applications on it here.
           </p>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/7NckgY15ABQ?si=v6uM2eCNkL5hAVM2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           <!-- <div class="content has-text-centered">

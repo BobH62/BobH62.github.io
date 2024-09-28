@@ -140,9 +140,9 @@ document.addEventListener('DOMContentLoaded', domReady);
                     case 1:
                         image.src = image.src + '_ours.jpg';
                         break;
-                    case 2:
-                        image.src = image.src + '_zoe.jpg';
-                        break;
+                    // case 2:
+                    //     image.src = image.src + '_zoe.jpg';
+                    //     break;
                 }
             }
 
