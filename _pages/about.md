@@ -38,3 +38,9 @@ Community Services
 * Teaching assistant: 
   * EMIA 2020: Cross-disciplinary Design Thinking, HKUST, 2024 Autumn
 
+ 
+Personal
+======
+Outside of work and research, I enjoy reading and pondering about the relationship between media, culture, and technology (among my favorites: Lawrence Li’s 一天世界, [声东击西](https://etw.fm/)). I like listening to and collecting Chinese Motion Pictures Soundtracks. Among my favorite movies are [Let the Bullets Fly (让子弹飞)](https://en.wikipedia.org/wiki/Let_the_Bullets_Fly)，[The GrandMaster (一代宗师)](https://zh.wikipedia.org/zh-hk/%E4%B8%80%E4%BB%A3%E5%AE%97%E5%B8%AB)， [Crouching Tiger, Hidden Dragon (卧虎藏龙)](https://zh.wikipedia.org/wiki/%E8%87%A5%E8%99%8E%E8%97%8F%E9%BE%8D_(%E9%9B%BB%E5%BD%B1)) and [The Assassin (刺客聂隐娘)](https://zh.wikipedia.org/wiki/%E5%88%BA%E5%AE%A2%E8%81%B6%E9%9A%B1%E5%A8%98).
+
+
