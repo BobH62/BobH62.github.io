@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am an MPhil. at HKUST [CKSRI](https://ri.hkust.edu.hk/), supervised by Prof. [Yi-Kuen Lee](https://seng.hkust.edu.hk/about/people/faculty/yi-kuen-lee) and Prof. [Huan YIN](https://huanyin94.github.io/). Prior to this, I earned my Bachelor's degree from the at South China University of Technology.
+I am an MPhil. at HKUST [Cheng Kar-Shun Robotics Institute (CKSRI)](https://ri.hkust.edu.hk/), supervised by Prof. [Yi-Kuen Lee](https://seng.hkust.edu.hk/about/people/faculty/yi-kuen-lee) and Prof. [Huan YIN](https://huanyin94.github.io/). Prior to this, I earned my Bachelor's degree from the at South China University of Technology.
 
 My primary research interests encompass robotics and spatial perception, with a particular emphasis on robust estimation, global localization, and 3d reconstruction.
 
