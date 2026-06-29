@@ -1,5 +1,0 @@
-Add placeholder Projects and Highlight pages, plus Home nav link
-
-Replace template demo portfolio items with clean TODO placeholders,
-rewrite Highlight page with placeholder structure, add Home to nav,
-and remove duplicate engineering.html (conflicting permalink).
