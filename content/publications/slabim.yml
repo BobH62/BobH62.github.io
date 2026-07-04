@@ -1,0 +1,12 @@
+title: >-
+  SLABIM: A SLAM-BIM Coupled Dataset in HKUST Main Building in Urban Environments
+authors: 'Haoming Huang, Zhijian Qiao, Zehuan Yu, Chuhao Liu, Shaojie Shen, and Huan Yin'
+venue: '2025 IEEE International Conference on Robotics & Automation (ICRA)'
+year: 2025
+image: /images/slabim.png
+type: paper
+order: 1
+links:
+  - { label: dataset, url: 'https://github.com/HKUST-Aerial-Robotics/SLABIM' }
+  - { label: video, url: 'https://www.youtube.com/watch?v=7NckgY15ABQ' }
+  - { label: code, url: 'https://github.com/HKUST-Aerial-Robotics/SLABIM' }

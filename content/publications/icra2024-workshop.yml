@@ -1,0 +1,12 @@
+title: >-
+  Global LiDAR registration on BIM leveraging pose Hough transform
+authors: 'Haoming Huang†, Zhijian Qiao†, Chuhao Liu, Shaojie Shen, Fumin Zhang, Huan Yin'
+venue: >-
+  3rd Workshop on Future of Construction: Lifelong Learning Robots in Changing
+  Construction Sites, ICRA, Yokohama, Japan, 2024
+year: 2024
+image: /images/icra2024.png
+type: workshop
+order: 3
+links:
+  - { label: poster, url: '/files/icra_poster.pdf' }

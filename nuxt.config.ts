@@ -1,0 +1,75 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  modules: ['@nuxt/content', '@nuxt/image'],
+
+  devtools: { enabled: true },
+
+  ssr: true,
+
+  site: {
+    url: 'https://bobh62.github.io',
+    name: 'Haoming Huang',
+  },
+
+  app: {
+    baseURL: '/',
+    head: {
+      htmlAttrs: { lang: 'en' },
+      title: 'Haoming Huang — Architecture · Robotics · AI',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          name: 'description',
+          content:
+            'Haoming Huang — MPhil (HKUST), LLM / World-Model Algorithm Engineer. Bridging architecture, robotics, and AI through cross-modal registration, SLAM, and digital fabrication.',
+        },
+        { name: 'theme-color', content: '#fafafa' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:title', content: 'Haoming Huang — Architecture · Robotics · AI' },
+        {
+          property: 'og:description',
+          content:
+            'MPhil (HKUST) · LLM / World-Model Algorithm Engineer. Bridging architecture, robotics, and AI.',
+        },
+        { property: 'og:url', content: 'https://bobh62.github.io' },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        {
+          rel: 'stylesheet',
+          href: 'https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=alpino@400,500,700&display=swap',
+        },
+      ],
+    },
+  },
+
+  css: ['~/assets/css/main.css'],
+
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: {
+            default: 'github-light',
+          },
+        },
+      },
+    },
+  },
+
+  image: {
+    quality: 80,
+    format: ['webp'],
+  },
+
+  nitro: {
+    preset: 'static',
+    prerender: {
+      crawlLinks: true,
+      routes: ['/', '/publications', '/projects', '/highlights'],
+    },
+  },
+
+  compatibilityDate: '2024-04-03',
+})

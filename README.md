@@ -1,16 +1,38 @@
+# bobh62.github.io
 
-## To run locally (not on GitHub Pages, to serve on your own computer)
+Personal website for Haoming Huang — built with [Nuxt 4](https://nuxt.com), [@nuxt/content](https://content.nuxt.com), and [@nuxt/image](https://image.nuxt.com). Design inspired by [beyond-disciplines.com](https://beyond-disciplines.com) (minimal, single-column, Satoshi/Alpino typography, zinc palette with a restrained teal accent).
 
-1. Clone the repository and made updates as detailed above
-1. Make sure you have ruby-dev, bundler, and nodejs installed: `sudo apt install ruby-dev ruby-bundler nodejs`
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `bundle exec jekyll s`
+## Stack
+
+- Nuxt 4 (Static Site Generation via `nuxt generate`)
+- @nuxt/content v3 (Markdown projects + YAML publications)
+- @nuxt/image (responsive WebP)
+- GitHub Actions → GitHub Pages
+
+## Develop
+
+```bash
+npm install
+npm run dev          # http://localhost:3000
 ```
-#导航
-_data/navigation.yml
-_pages/about.md
-_pages/publications.md
 
-#教程
-_pages/markdown.md
+## Content
+
+- `content/projects/*.md` — project pages (frontmatter: title, date, excerpt, image, tags, role, stack, links, gallery, nda)
+- `content/publications/*.yml` — publication entries
+- `app/pages/index.vue` — About / home
+- `app/pages/highlights.vue` — trajectory timeline, awards, open source
+- `public/images/` — site images (SDME gallery in `public/images/sdme/`)
+
+## Build & preview
+
+```bash
+npm run generate     # outputs .output/public
+npx serve .output/public
 ```
+
+## Deploy
+
+Push to `main` triggers `.github/workflows/deploy.yml`, which builds and deploys to GitHub Pages. In repo Settings → Pages, set Source to **GitHub Actions** (one-time).
+
+The previous Jekyll site is preserved on the `backup/jekyll` branch and the `jekyll-final` tag.

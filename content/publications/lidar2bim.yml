@@ -1,0 +1,12 @@
+title: >-
+  Speak the Same Language: Global LiDAR Registration on BIM Using Pose Hough Transform
+authors: 'Zhijian Qiao†, Haoming Huang†, Chuhao Liu, Shaojie Shen, Fumin Zhang, Huan Yin'
+venue: 'IEEE Transactions on Automation Science and Engineering (T-ASE), March 2025'
+year: 2025
+image: /images/lidar2bim.png
+type: paper
+order: 2
+links:
+  - { label: arxiv, url: 'https://arxiv.org/abs/2405.03969' }
+  - { label: code, url: 'https://github.com/HKUST-Aerial-Robotics/LiDAR2BIM-Registration' }
+  - { label: video, url: 'https://www.youtube.com/watch?v=SWbnsaRyL-M' }
