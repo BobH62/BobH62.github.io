@@ -10,7 +10,7 @@ if (!project.value) {
 
 useSeoMeta({
   title: () => `${project.value?.title} — Haoming Huang`,
-  description: () => project.value?.excerpt || '',
+  description: () => project.value?.summary || '',
 })
 
 function year(date: string) {
@@ -25,12 +25,17 @@ function year(date: string) {
     <header class="project-head">
       <div class="project-head-text">
         <div class="project-meta">
-          <span class="card-year">{{ year(project.date) }}</span>
+          <span class="card-year">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 9h18M8 3v4M16 3v4" />
+            </svg>
+            {{ year(project.date) }}
+          </span>
           <span v-for="t in project.tags" :key="t" class="tag">{{ t }}</span>
           <span v-if="project.nda" class="tag tag-accent">NDA</span>
         </div>
         <h1>{{ project.title }}</h1>
-        <p class="excerpt">{{ project.excerpt }}</p>
+        <p class="excerpt">{{ project.summary }}</p>
         <dl class="meta-grid">
           <div v-if="project.role"><dt>Role</dt><dd>{{ project.role }}</dd></div>
           <div v-if="project.stack?.length"><dt>Stack</dt><dd>{{ project.stack.join(', ') }}</dd></div>
@@ -66,8 +71,14 @@ function year(date: string) {
   align-items: start;
   margin: 1.25rem 0 1.5rem;
 }
-.project-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin-bottom: 0.5rem; }
-.card-year { font-size: 0.8rem; color: var(--text-faint); }
+.project-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin-bottom: 0.5rem; color: var(--text-faint); }
+.card-year {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--text-faint);
+}
 .excerpt { color: var(--text-muted); margin-top: 0; }
 .meta-grid { margin: 1rem 0 0; }
 .meta-grid > div { display: grid; grid-template-columns: 5rem 1fr; gap: 0.5rem; margin: 0.35rem 0; font-size: 0.9rem; }
@@ -79,7 +90,7 @@ function year(date: string) {
   width: 100%; border: 1px solid var(--border); border-radius: var(--radius); display: block;
 }
 
-.project-body { line-height: 1.7; }
+.project-body { line-height: 1.7; max-width: 64rem; }
 .project-body :deep(h2) { margin-top: 2rem; }
 .project-body :deep(ul) { padding-left: 1.25rem; }
 .project-body :deep(img) { border-radius: var(--radius); border: 1px solid var(--border); }

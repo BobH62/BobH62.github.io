@@ -22,7 +22,7 @@ export default defineNuxtConfig({
         {
           name: 'description',
           content:
-            'Haoming Huang — MPhil (HKUST), LLM / World-Model Algorithm Engineer. Bridging architecture, robotics, and AI through cross-modal registration, SLAM, and digital fabrication.',
+            'Haoming Huang — MPhil (HKUST), World-Model Algorithm Engineer. Bridging architecture, robotics, and AI through cross-modal registration, SLAM, and digital fabrication.',
         },
         { name: 'theme-color', content: '#fafafa' },
         { property: 'og:type', content: 'website' },
@@ -30,7 +30,7 @@ export default defineNuxtConfig({
         {
           property: 'og:description',
           content:
-            'MPhil (HKUST) · LLM / World-Model Algorithm Engineer. Bridging architecture, robotics, and AI.',
+            'MPhil (HKUST) · World-Model Algorithm Engineer. Bridging architecture, robotics, and AI.',
         },
         { property: 'og:url', content: 'https://bobh62.github.io' },
       ],
@@ -39,6 +39,13 @@ export default defineNuxtConfig({
         {
           rel: 'stylesheet',
           href: 'https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=alpino@400,500,700&display=swap',
+        },
+      ],
+      script: [
+        {
+          innerHTML:
+            "(function(){try{var t=localStorage.getItem('theme');var d=t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches);if(d){document.documentElement.classList.add('dark');document.documentElement.style.colorScheme='dark';}}catch(e){}})();",
+          tagPosition: 'head',
         },
       ],
     },

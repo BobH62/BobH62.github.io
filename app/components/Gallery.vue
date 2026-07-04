@@ -30,15 +30,15 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
 
 <template>
   <div class="gallery">
-    <button
-      v-for="(img, i) in images"
-      :key="img"
-      type="button"
-      class="gallery-cell"
-      @click="open = i"
-    >
-      <NuxtImg :src="img" :alt="captions?.[i] || ''" format="webp" />
-    </button>
+    <figure v-for="(img, i) in images" :key="img" class="gfig">
+      <button type="button" class="gfig-btn" @click="open = i">
+        <NuxtImg :src="img" :alt="captions?.[i] || ''" format="webp" />
+      </button>
+      <figcaption>
+        <span class="figno">Fig. {{ i + 1 }}</span>
+        <span v-if="captions?.[i]" class="figcap">{{ captions[i] }}</span>
+      </figcaption>
+    </figure>
 
     <Teleport to="body">
       <div v-if="open !== null" class="lightbox" @click.self="close">
@@ -46,7 +46,10 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
         <button class="lb-nav lb-prev" aria-label="Previous" @click="prev">&lsaquo;</button>
         <figure class="lb-figure" @click.stop>
           <img :src="images[open]" :alt="captions?.[open] || ''" />
-          <figcaption v-if="captions?.[open]">{{ captions[open] }}</figcaption>
+          <figcaption v-if="captions?.[open]">
+            <span class="figno">Fig. {{ open + 1 }}</span>
+            <span>{{ captions[open] }}</span>
+          </figcaption>
         </figure>
         <button class="lb-nav lb-next" aria-label="Next" @click="next">&rsaquo;</button>
       </div>
@@ -56,22 +59,46 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
 
 <style scoped>
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 0.5rem;
-  margin: 1.5rem 0;
+  column-count: 2;
+  column-gap: 1rem;
+  margin: 2.5rem 0;
 }
-.gallery-cell {
+.gfig {
+  margin: 0 0 1rem;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.gfig-btn {
+  display: block;
+  width: 100%;
+  padding: 0;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
-  padding: 0;
   background: var(--bg-elev);
   cursor: zoom-in;
-  transition: transform var(--transition);
+  transition: border-color var(--transition);
 }
-.gallery-cell:hover { transform: scale(1.01); }
-.gallery-cell :deep(img) { width: 100%; display: block; }
+.gfig-btn:hover { border-color: var(--border-strong); }
+.gfig-btn :deep(img) { width: 100%; height: auto; display: block; }
+
+figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-faint);
+}
+.figno {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin-right: 0.4rem;
+}
+.figcap { color: var(--text-faint); }
+
+@media (max-width: 40rem) {
+  .gallery { column-count: 1; }
+}
 
 .lightbox {
   position: fixed;
@@ -85,7 +112,8 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
 }
 .lb-figure { margin: 0; max-width: 90vw; max-height: 88vh; text-align: center; }
 .lb-figure img { max-width: 90vw; max-height: 80vh; object-fit: contain; }
-.lb-figure figcaption { color: #d4d4d8; font-size: 0.875rem; margin-top: 0.5rem; }
+.lb-figure figcaption { color: #d4d4d8; font-size: 0.875rem; margin-top: 0.75rem; }
+.lb-figure figcaption .figno { color: #fafafa; }
 .lb-close, .lb-nav {
   position: absolute;
   background: transparent;

@@ -6,7 +6,7 @@ const trajectory = [
   { year: '2022', label: 'Gridshell Research', desc: 'Active-bending & multistable formworks — Ice & Snow First Winner', to: '/projects/gridshell' },
   { year: '2023', label: 'MPhil, HKUST', desc: 'Cross-modal LiDAR–BIM registration & SLAM', to: '' },
   { year: '2025', label: 'LiDAR2BIM / SLABIM', desc: 'T-ASE paper & ICRA dataset, open-sourced', to: '/projects/lidar2bim' },
-  { year: '2026', label: 'Zhuoyu World Model', desc: 'LLM / world-model engineer for autonomous driving', to: '/projects/world-model' },
+  { year: '2026', label: 'Zhuoyu World Model', desc: 'World-model engineer for autonomous driving', to: '/projects/world-model' },
 ]
 
 const awards = [

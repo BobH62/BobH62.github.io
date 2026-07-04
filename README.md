@@ -18,7 +18,7 @@ npm run dev          # http://localhost:3000
 
 ## Content
 
-- `content/projects/*.md` — project pages (frontmatter: title, date, excerpt, image, tags, role, stack, links, gallery, nda)
+- `content/projects/*.md` — project pages (frontmatter: title, date, summary, image, tags, role, stack, links, gallery, nda)
 - `content/publications/*.yml` — publication entries
 - `app/pages/index.vue` — About / home
 - `app/pages/highlights.vue` — trajectory timeline, awards, open source

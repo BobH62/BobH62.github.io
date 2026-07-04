@@ -8,4 +8,5 @@ year: 2022
 image: /images/cable_driven.png
 type: paper
 order: 5
-links: []
+links:
+  - { label: pdf, url: 'https://www.ingentaconnect.com/contentone/iass/piass/2022/00002022/00000007/art00013?crawler=true&mimetype=application/pdf' }

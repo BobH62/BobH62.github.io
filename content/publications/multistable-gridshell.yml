@@ -10,4 +10,5 @@ year: 2022
 image: /images/bistable.png
 type: paper
 order: 4
-links: []
+links:
+  - { label: pdf, url: 'https://www.ingentaconnect.com/contentone/iass/piass/2022/00002022/00000017/art00002?crawler=true&mimetype=application/pdf' }

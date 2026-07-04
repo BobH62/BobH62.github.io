@@ -13,7 +13,8 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string(),
         date: z.string(),
-        excerpt: z.string(),
+        order: z.number().default(0),
+        summary: z.string(),
         image: z.string().optional(),
         tags: z.array(z.string()).default([]),
         role: z.string().optional(),

@@ -1,9 +1,10 @@
 <script setup lang="ts">
 const interests = [
   'World Models',
-  '3D Perception & Registration',
-  'SLAM with BIM / Digital-Twin Priors',
-  'Digital Fabrication',
+  'Spatial Intelligence',
+  'Robotic Perception',
+  'Localization & Mapping (SLAM)',
+  'Computational Design',
 ]
 
 const education = [
@@ -24,7 +25,7 @@ const education = [
 useSeoMeta({
   title: 'Haoming Huang — Architecture · Robotics · AI',
   description:
-    'MPhil (HKUST) · LLM / World-Model Algorithm Engineer at Zhuoyu (ex-DJI Automotive). Bridging architecture, robotics, and AI.',
+    'MPhil (HKUST) · World-Model Algorithm Engineer at Zhuoyu (ex-DJI Automotive). Bridging architecture, robotics, and AI.',
 })
 </script>
 
@@ -35,47 +36,64 @@ useSeoMeta({
         src="/images/portrait.jpg"
         alt="Haoming Huang"
         class="portrait"
-        width="160"
-        height="160"
+        width="190"
+        height="190"
         format="webp"
       />
       <div class="intro">
-        <h1>Haoming Huang <span class="name-cn">黄浩铭</span></h1>
+        <h1>Haoming Huang <span class="name-cn">黄浩明</span></h1>
         <p class="tagline">
           Bridging the digital and the physical — from architecture to robotics to AI.
         </p>
         <p class="lead">
           I recently completed my MPhil at the
-          <a href="https://uav.hkust.edu.hk/" target="_blank" rel="noopener">Aerial Robotics Group</a>, HKUST,
+          <a href="https://ri.hkust.edu.hk/" target="_blank" rel="noopener">Cheng Kar-Shun Robotics Institute (CKSRI)</a>, HKUST,
           advised by Prof.
           <a href="https://seng.hkust.edu.hk/about/people/faculty/yi-kuen-lee" target="_blank" rel="noopener">Yi-Kuen Lee</a>
           and Prof.
-          <a href="https://huanyin94.github.io/" target="_blank" rel="noopener">Huan Yin</a>.
-          I am now an LLM / World-Model Algorithm Engineer at
-          <a href="https://www.zhuoyu.com/" target="_blank" rel="noopener">Zhuoyu</a>
+          <a href="https://huanyin94.github.io/" target="_blank" rel="noopener">Huan Yin</a>,
+          where I worked closely with
+          <a href="https://qiaozhijian.github.io/" target="_blank" rel="noopener">Zhijian Qiao</a>
+          from the
+          <a href="https://uav.hkust.edu.hk/" target="_blank" rel="noopener">Aerial Robotics Group</a>.
+          I am deeply grateful to Prof.
+          <a href="https://seng.hkust.edu.hk/about/people/faculty/zexiang-li" target="_blank" rel="noopener">Zexiang Li</a>
+          for his mentorship and support throughout my career.
+          I am now a World-Model Algorithm Engineer at
+          <a href="https://www.zyt.com/zh" target="_blank" rel="noopener">Zhuoyu</a>
           (formerly DJI Automotive), working on world models for autonomous driving.
         </p>
         <p>
           My path is deliberately cross-disciplinary. I hold a Bachelor of Architecture from
           South China University of Technology (2017–2022), where I spent four years between
           digital design, robotic fabrication, and full-scale construction — including a
-          student-led solar house shipped from Dongguan to Dubai. That hands-on,
-          "design-to-physical" mindset carried into my robotics MPhil: cross-modal
-          LiDAR–BIM registration, SLAM, and 3D perception, and now into foundation models
-          and world models for autonomous driving.
+          student-led solar house for the Solar Decathlon, the "Olympics" of international
+          architecture student competitions. That hands-on, "design-to-physical" mindset
+          carried into my robotics MPhil: cross-modal LiDAR–BIM registration, SLAM, and 3D
+          perception, and now into foundation models and world models for autonomous driving.
         </p>
         <p>
           I am broadly interested in <strong>world models</strong>,
-          <strong>3D perception &amp; registration</strong>,
-          <strong>SLAM with BIM / digital-twin priors</strong>, and
-          <strong>digital fabrication</strong> — and in how ideas migrate across
-          architecture, robotics, and AI.
-        </p>
-        <p class="contact">
-          Feel free to reach me at
-          <a href="mailto:hhuangce@connect.ust.hk">hhuangce@connect.ust.hk</a> :)
+          <strong>spatial intelligence</strong>,
+          <strong>robotic perception</strong>, and
+          <strong>localization &amp; mapping (SLAM)</strong> — and in how ideas migrate across
+          design, robotics, and AI.
         </p>
       </div>
+      <aside class="contact-col">
+        <h2>Contact</h2>
+        <div class="contact-name">Haoming Huang</div>
+        <div class="contact-line">MPhil, HKUST</div>
+        <div class="contact-line">Cheng Kar-Shun Robotics Institute</div>
+        <div class="contact-line">Hong Kong SAR, China</div>
+        <a class="contact-mail" href="mailto:hhuangce@connect.ust.hk">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="2" />
+            <path d="m3 7 9 6 9-6" />
+          </svg>
+          <span>hhuangce@connect.ust.hk</span>
+        </a>
+      </aside>
     </section>
 
     <section>
@@ -123,7 +141,6 @@ useSeoMeta({
     <section>
       <h2>Community Service</h2>
       <ul>
-        <li>Conference reviewer: ICRA</li>
         <li>Teaching assistant: EMIA 2020 Cross-disciplinary Design Thinking, HKUST, 2024 Autumn</li>
       </ul>
     </section>
@@ -131,23 +148,23 @@ useSeoMeta({
 </template>
 
 <style scoped>
-.about { padding-top: 1rem; }
+.about { padding-top: 1rem; max-width: 72rem; }
 .profile {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 190px 1fr 200px;
+  gap: 3rem;
+  align-items: start;
   margin-bottom: 1.5rem;
 }
 .portrait {
-  flex: 0 0 auto;
-  width: 160px;
-  height: 160px;
+  width: 190px;
+  height: 190px;
   object-fit: cover;
   border-radius: 50%;
   border: 1px solid var(--border);
   background: var(--bg-elev);
 }
-.intro { flex: 1; min-width: 0; }
+.intro { min-width: 0; }
 .name-cn {
   font-family: var(--font-body);
   font-weight: 400;
@@ -162,7 +179,29 @@ useSeoMeta({
   line-height: 1.5;
 }
 .lead { font-size: 1.02rem; }
-.contact { margin-top: 1.25rem; }
+
+.contact-col {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.contact-col h2 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+.contact-name { font-weight: 600; color: var(--text); }
+.contact-line { color: var(--text-muted); }
+.contact-mail {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border-strong);
+  transition: border-color var(--transition);
+}
+.contact-mail:hover { border-bottom-color: var(--accent); }
 
 .tags { display: flex; flex-wrap: wrap; }
 
@@ -182,8 +221,12 @@ useSeoMeta({
 .honors { padding-left: 1.25rem; }
 .honors li { margin: 0.5rem 0; }
 
+@media (max-width: 48rem) {
+  .profile { grid-template-columns: 160px 1fr; }
+  .contact-col { grid-column: 1 / -1; }
+}
 @media (max-width: 34rem) {
-  .profile { flex-direction: column; gap: 1.25rem; }
-  .portrait { width: 120px; height: 120px; }
+  .profile { grid-template-columns: 1fr; gap: 1.25rem; }
+  .portrait { width: 130px; height: 130px; }
 }
 </style>
