@@ -10,7 +10,7 @@ locale: "en-US"
 title: "Haoming's Website"
 title_separator: "-"
 name: &name "Haoming Huang (黄浩明)"
-description: &description "MPhl. student in HKUST CKSRI"
+description: &description "MPhil graduate (HKUST) bridging architecture, robotics, and AI"
 url: https://bobh62.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: "" # the subpath of your site, e.g. "/blog"
 repository: "bobh62/bobh62.github.io"
@@ -84,8 +84,8 @@ analytics:
 author:
   name: "Haoming Huang (黄浩明)"
   avatar: "portrait.jpg"
-  bio: "MPhil. student in HKUST CKSRI"
-  location: "Clear Water Bay, Hong Kong, China"
+  bio: "MPhil (HKUST) · LLM / World-Model Algorithm Engineer at Zhuoyu (ex-DJI Automotive)"
+  location: "China"
   employer:
   pubmed:
   googlescholar:
