@@ -1,12 +1,14 @@
 <script setup lang="ts">
 const trajectory = [
-  { year: '2017', label: 'B.Arch, SCUT', desc: 'Architecture — digital design & robotic fabrication', to: '' },
-  { year: '2021', label: 'Point-Cloud Registration', desc: 'First bridge from architecture into robotics', to: '/projects/pc-registration' },
+  { year: '2017–2022', label: 'B.Arch, SCUT', desc: 'Architecture — digital design, robotic fabrication & full-scale construction', to: '' },
+  { year: '2017–2022', label: 'Architectural Digital Lab (ADL)', desc: 'Member → rotating chair — building a cross-disciplinary student community across digital fabrication, interaction & urban design', to: '' },
+  { year: '2021', label: 'Point-Cloud Registration', desc: 'R&D lab intern at RoboticPlus.Tech — first bridge from architecture into robotics', to: '/projects/pc-registration' },
   { year: '2021', label: 'Solar Decathlon ME', desc: 'Overall Champion — full-size solar house, Dubai', to: '/projects/sdme' },
-  { year: '2022', label: 'Gridshell Research', desc: 'Active-bending & multistable formworks — Ice & Snow First Winner', to: '/projects/gridshell' },
-  { year: '2023', label: 'MPhil, HKUST', desc: 'Cross-modal LiDAR–BIM registration & SLAM', to: '' },
+  { year: '2022', label: 'Gridshell Research', desc: 'Active-bending & multistable formworks', to: '/projects/gridshell' },
+  { year: '2022', label: 'Graduated with Distinction', desc: 'Bachelor of Architecture, SCUT', to: '' },
+  { year: '2023–2025', label: 'MPhil, HKUST CKSRI', desc: 'Cross-modal LiDAR–BIM registration & SLAM', to: '' },
   { year: '2025', label: 'LiDAR2BIM / SLABIM', desc: 'T-ASE paper & ICRA dataset, open-sourced', to: '/projects/lidar2bim' },
-  { year: '2026', label: 'Zhuoyu World Model', desc: 'World-model engineer for autonomous driving', to: '/projects/world-model' },
+  { year: '2026–present', label: 'Zhuoyu Technology (formerly DJI Automotive)', desc: 'World Model Algorithm Engineer, Autonomous Driving', to: '/projects/world-model' },
 ]
 
 const awards = [
@@ -36,6 +38,34 @@ const oss = [
     desc: 'Global LiDAR–BIM registration via Pose Hough Transform — cross-modal, no pose prior.',
     venue: 'IEEE T-ASE',
     url: 'https://github.com/HKUST-Aerial-Robotics/LiDAR2BIM-Registration',
+  },
+]
+
+const videos = [
+  {
+    kind: 'youtube',
+    id: '7NckgY15ABQ',
+    title: 'SLABIM',
+    venue: 'ICRA 2025',
+    desc: 'A SLAM-BIM coupled dataset (164K+ LiDAR scans, 3,900+ RGB images) with benchmarks.',
+    url: 'https://github.com/HKUST-Aerial-Robotics/SLABIM',
+  },
+  {
+    kind: 'youtube',
+    id: 'SWbnsaRyL-M',
+    title: 'LiDAR2BIM-Registration',
+    venue: 'IEEE T-ASE',
+    desc: 'Global LiDAR–BIM registration via Pose Hough Transform — cross-modal, no pose prior.',
+    url: 'https://github.com/HKUST-Aerial-Robotics/LiDAR2BIM-Registration',
+  },
+  {
+    kind: 'local',
+    src: '/videos/elec5660.mp4',
+    poster: '/videos/elec5660-poster.jpg',
+    title: 'ELEC5660 — Introduction to Aerial Robotics',
+    venue: 'HKUST',
+    desc: 'Vision-based autonomous drone navigation — course project at the HKUST Aerial Robotics Group.',
+    url: 'https://github.com/HKUST-Aerial-Robotics/HKUST-ELEC5660-Introduction-to-Aerial-Robotics',
   },
 ]
 
@@ -96,6 +126,40 @@ useSeoMeta({
         </li>
       </ul>
     </section>
+
+    <section>
+      <h2>Project videos</h2>
+      <p class="section-lead">Demos from my MPhil open-source work and the HKUST aerial robotics course.</p>
+      <div class="vid-scroll">
+        <figure v-for="v in videos" :key="v.title" class="vid-card">
+          <div class="vid-frame">
+            <iframe
+              v-if="v.kind === 'youtube'"
+              :src="`https://www.youtube.com/embed/${v.id}`"
+              frameborder="0"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
+            <video
+              v-else
+              controls
+              preload="none"
+              :src="v.src"
+              :poster="v.poster"
+            />
+          </div>
+          <figcaption>
+            <div class="vid-head">
+              <span class="vid-title">{{ v.title }}</span>
+              <span class="vid-venue">{{ v.venue }}</span>
+            </div>
+            <p class="vid-desc">{{ v.desc }}</p>
+            <a :href="v.url" target="_blank" rel="noopener" class="vid-link link-underline">repo</a>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -111,11 +175,11 @@ useSeoMeta({
 
 .timeline { list-style: none; padding: 0; margin: 1.25rem 0 0; position: relative; }
 .timeline::before {
-  content: ''; position: absolute; left: 4.5rem; top: 0.4rem; bottom: 0.4rem; width: 1px; background: var(--border);
+  content: ''; position: absolute; left: 6.5rem; top: 0.4rem; bottom: 0.4rem; width: 1px; background: var(--border);
 }
-.tl-item { display: grid; grid-template-columns: 4rem 1fr; gap: 1rem; padding: 0.6rem 0; position: relative; align-items: baseline; }
-.tl-year { font-variant-numeric: tabular-nums; color: var(--text-faint); font-size: 0.85rem; text-align: right; }
-.tl-dot { position: absolute; left: 4.4rem; top: 1rem; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg); }
+.tl-item { display: grid; grid-template-columns: 6rem 1fr; gap: 1rem; padding: 0.6rem 0; position: relative; align-items: baseline; }
+.tl-year { font-variant-numeric: tabular-nums; color: var(--text-faint); font-size: 0.85rem; text-align: right; white-space: nowrap; }
+.tl-dot { position: absolute; left: 6.4rem; top: 1rem; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg); }
 .tl-label-text { font-weight: 600; }
 .tl-link .tl-label-text { color: var(--text); border-bottom: 1px solid var(--border-strong); }
 .tl-link:hover .tl-label-text { color: var(--accent); border-bottom-color: var(--accent); }
@@ -127,6 +191,48 @@ useSeoMeta({
 .oss-name { font-weight: 600; }
 .oss-venue { margin-left: 0.6rem; font-size: 0.75rem; color: var(--text-faint); border: 1px solid var(--border); border-radius: 999px; padding: 0.05rem 0.5rem; }
 .oss-desc { margin: 0.3rem 0 0; color: var(--text-muted); font-size: 0.9rem; }
+
+.vid-scroll {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  margin: 1.25rem 0 0;
+  padding: 0.25rem 0 1.25rem;
+  -webkit-overflow-scrolling: touch;
+}
+.vid-card {
+  flex: 0 0 auto;
+  width: 26rem;
+  margin: 0;
+  scroll-snap-align: start;
+}
+.vid-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #000;
+}
+.vid-frame iframe,
+.vid-frame video { width: 100%; height: 100%; border: 0; display: block; background: #000; }
+.vid-card figcaption { margin-top: 0.5rem; }
+.vid-head { display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; }
+.vid-title { font-weight: 600; }
+.vid-venue { font-size: 0.72rem; color: var(--text-faint); border: 1px solid var(--border); border-radius: 999px; padding: 0.05rem 0.5rem; }
+.vid-desc { margin: 0.3rem 0 0.4rem; font-size: 0.85rem; color: var(--text-muted); line-height: 1.45; }
+.vid-link { font-size: 0.82rem; }
+.vid-scroll::-webkit-scrollbar { height: 8px; }
+.vid-scroll::-webkit-scrollbar-track { background: transparent; }
+.vid-scroll::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 999px; }
+.vid-scroll::-webkit-scrollbar-thumb:hover { background: var(--text-faint); }
+
+@media (max-width: 34rem) {
+  .vid-card { width: 18rem; }
+}
 
 @media (max-width: 32rem) {
   .timeline::before { left: 0.5rem; }

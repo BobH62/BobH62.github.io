@@ -16,6 +16,7 @@ export default defineContentConfig({
         order: z.number().default(0),
         summary: z.string(),
         image: z.string().optional(),
+        cardImage: z.string().optional(),
         tags: z.array(z.string()).default([]),
         role: z.string().optional(),
         stack: z.array(z.string()).default([]),

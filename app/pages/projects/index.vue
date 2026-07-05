@@ -37,8 +37,8 @@ useSeoMeta({
         <NuxtLink :to="p.path" class="card-link">
           <div class="card-media">
             <NuxtImg
-              v-if="p.image"
-              :src="p.image"
+              v-if="p.cardImage || p.image"
+              :src="p.cardImage || p.image"
               :alt="p.title"
               format="webp"
               width="640"

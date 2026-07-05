@@ -1,5 +1,5 @@
 ---
-title: 'Visual-link Chinatown — Urban-Scene Image Classification & Segmentation'
+title: 'Visual-link Chinatown'
 date: 2020-03-01
 order: 0
 summary: A visual study of how Chinatowns represent China — street-view imagery composited into a Chinese gate, paired with a CNN pipeline (VGG / AlexNet / ResNet) and semantic segmentation (KITTI / ADE20K) for quantitative urban-feature analysis.
@@ -7,8 +7,7 @@ category: project
 nda: false
 image: /images/other/chinatown.jpg
 tags:
-  - Visual Analysis
-  - Image Mosaic
+  - Urban Study
   - Deep Learning
   - Semantic Segmentation
 role: Methodology and experiments

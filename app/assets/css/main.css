@@ -10,6 +10,7 @@
   --accent-hover: #115e59;
   --accent-soft: #ccfbf1;
   --header-bg: rgba(250, 250, 250, 0.85);
+  --seal-filter: none;
 
   --maxw: 64rem;
   --maxw-wide: 72rem;
@@ -33,6 +34,7 @@
   --accent-hover: #5eead4;
   --accent-soft: rgba(45, 212, 191, 0.14);
   --header-bg: rgba(11, 11, 12, 0.8);
+  --seal-filter: invert(1);
 }
 
 * {

@@ -22,7 +22,7 @@ export default defineNuxtConfig({
         {
           name: 'description',
           content:
-            'Haoming Huang — MPhil (HKUST), World-Model Algorithm Engineer. Bridging architecture, robotics, and AI through cross-modal registration, SLAM, and digital fabrication.',
+            'Haoming Huang — MPhil (HKUST), World Model Algorithm Engineer. Bridging architecture, robotics, and AI through cross-modal registration, SLAM, and digital fabrication.',
         },
         { name: 'theme-color', content: '#fafafa' },
         { property: 'og:type', content: 'website' },
@@ -30,7 +30,7 @@ export default defineNuxtConfig({
         {
           property: 'og:description',
           content:
-            'MPhil (HKUST) · World-Model Algorithm Engineer. Bridging architecture, robotics, and AI.',
+            'MPhil (HKUST) · World Model Algorithm Engineer. Bridging architecture, robotics, and AI.',
         },
         { property: 'og:url', content: 'https://bobh62.github.io' },
       ],

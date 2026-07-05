@@ -14,7 +14,10 @@ const year = new Date().getFullYear()
   <div class="site">
     <header class="site-header">
       <div class="header-inner">
-        <NuxtLink to="/" class="brand">Haoming Huang</NuxtLink>
+        <NuxtLink to="/" class="brand">
+          <img src="/images/seal.png" alt="" class="seal" width="36" height="36" />
+          <span>Haoming Huang</span>
+        </NuxtLink>
         <div class="nav-wrap">
           <nav class="nav">
             <NuxtLink
@@ -93,12 +96,24 @@ const year = new Date().getFullYear()
   max-width: 100%;
 }
 .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1rem;
   color: var(--text);
 }
 .brand:hover { color: var(--accent); }
+.seal {
+  width: 1.55rem;
+  height: 1.55rem;
+  display: block;
+  border-radius: 2px;
+  filter: var(--seal-filter);
+  transition: filter var(--transition);
+}
+.brand:hover .seal { opacity: 0.85; }
 
 .nav-wrap { display: flex; align-items: center; gap: 1.25rem; }
 .nav { display: flex; gap: 1.1rem; }
