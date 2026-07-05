@@ -47,6 +47,10 @@ export default defineNuxtConfig({
         },
         { name: 'twitter:image', content: 'https://bobh62.github.io/images/og-image.png' },
         { name: 'author', content: 'Haoming Huang' },
+        {
+          name: 'google-site-verification',
+          content: 'ETZDjK16bMgdRzfkohmsj72q5bmyDhAVjyuNWFSBDx8',
+        },
       ],
       link: [
         { rel: 'canonical', href: 'https://bobh62.github.io/' },
