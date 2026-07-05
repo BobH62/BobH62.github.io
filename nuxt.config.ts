@@ -36,6 +36,9 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/images/favicon-16x16.png' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/images/favicon-32x32.png' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/images/apple-touch-icon.png' },
         {
           rel: 'stylesheet',
           href: 'https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=alpino@400,500,700&display=swap',
